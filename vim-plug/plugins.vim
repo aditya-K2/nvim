@@ -1,10 +1,4 @@
   call plug#begin('~/.config/nvim/autoload/plugged')
-  
-      " Better Syntax Support
-	    " File Explorer
-      Plug 'scrooloose/NERDTree'
-	    " Auto pairs for '(' '[' '{'
-	  Plug 'jiangmiao/auto-pairs'
 
 	  Plug 'reewr/vim-monokai-phoenix'
       
@@ -15,4 +9,7 @@
 	  Plug 'justinmk/vim-sneak'   
 	  
 	  Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
+	  
+	  Plug 'mhinz/vim-startify'
+
   call plug#end()
