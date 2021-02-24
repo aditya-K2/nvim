@@ -12,4 +12,7 @@
 	  
 	  Plug 'mhinz/vim-startify'
 
+	  Plug 'ayu-theme/ayu-vim'
+
+	  Plug 'tpope/vim-commentary'
   call plug#end()
