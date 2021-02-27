@@ -15,4 +15,9 @@
 	  Plug 'ayu-theme/ayu-vim'
 
 	  Plug 'tpope/vim-commentary'
+
+	  Plug 'mattn/emmet-vim'
+
+	  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
   call plug#end()

@@ -23,4 +23,8 @@
 syntax on
 colorscheme monokai-phoenix
 hi Normal guibg=NONE ctermbg=NONE
+hi SignColumn guibg=NONE ctermbg=NONE
 let g:airline_theme='wombat'
+
+let g:user_emmet_leader_key=","
+
