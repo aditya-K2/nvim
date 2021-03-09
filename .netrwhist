@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =6
+let g:netrw_dirhist_6='/home/aditya/suckless/scripts'
+let g:netrw_dirhist_5='/home/aditya/.config/ncmpcpp'
+let g:netrw_dirhist_4='/home/aditya/.config/mpd'
+let g:netrw_dirhist_3='/home/aditya/.config'
+let g:netrw_dirhist_2='/home/aditya/.config/ncmpcpp'
+let g:netrw_dirhist_1='/home/aditya/.config'
+let g:netrw_dirhist_0='/home'
+let g:netrw_dirhist_9='/home/aditya'
+let g:netrw_dirhist_8='/home/aditya/.config/nvim'
+let g:netrw_dirhist_7='/home/aditya/suckless/scripts'

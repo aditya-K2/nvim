@@ -2,7 +2,7 @@
  let g:mapleader = "\<Space>"
  syntax enable                           " Enables syntax highlighing
  set hidden                              " Required to keep multiple buffers open multiple buffers
- set nowrap                              " Display long lines as just one line
+ set nowrap
  set pumheight=10                        " Makes popup menu smaller
  set mouse=a                             " Enable your mouse
  set splitbelow                          " Horizontal splits will automatically be below
@@ -25,6 +25,8 @@ colorscheme monokai-phoenix
 hi Normal guibg=NONE ctermbg=NONE
 hi SignColumn guibg=NONE ctermbg=NONE
 let g:airline_theme='wombat'
-
 let g:user_emmet_leader_key=","
+let g:user_emmet_mode="n"
+hi Pmenu ctermfg=gray ctermbg=236
+
 
