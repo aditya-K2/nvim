@@ -1,5 +1,4 @@
-" set leader key
- let g:mapleader = "\<Space>"
+ let g:mapleader = "\<Space>"            " set leader key
  syntax enable                           " Enables syntax highlighing
  set hidden                              " Required to keep multiple buffers open multiple buffers
  set nowrap
@@ -21,12 +20,12 @@
  set shiftwidth=4
  set smartindent
 syntax on
-colorscheme monokai-phoenix
+colorscheme gruvbox 
 hi Normal guibg=NONE ctermbg=NONE
 hi SignColumn guibg=NONE ctermbg=NONE
-let g:airline_theme='wombat'
+let g:airline_theme = 'minimalist'
 let g:user_emmet_leader_key=","
 let g:user_emmet_mode="n"
 hi Pmenu ctermfg=gray ctermbg=236
-
-
+let g:color_coded_enabled = 1
+set nocompatible

@@ -12,7 +12,21 @@ nnoremap <S-TAB> :bprevious<CR>
 " Alternate way to save
 "nnoremap <C-s> :w<CR>
 " Alternate way to quit
-nnoremap <C-Q> :wq!<CR>
+" nnoremap <C-Q> :wq!<CR>
+ nnoremap <C-\> :vsplit <CR>
+ nnoremap <C-_> :split vertical <CR>
+ nnoremap <C-n> :NERDTree <CR>
+ nnoremap <C-u> <cmd> lua require('telescope.builtin').find_files{cwd='/H/code',shorten_path = true, prompt='cpFiles'}<CR>
+ nmap <S-n> <cmd> lua require('telescope.builtin').find_files{cwd='/home/aditya/.config/nvim', prompt='cpFiles'}<CR>
+
+nmap <S-f> :Telescope find_files <CR>
+nmap fg :Telescope live_grep <CR>
+nmap fh :Telescope help_tags <CR>
+
+" nnoremap <leader>f <cmd>Telescope find_files<cr>
+" nnoremap <leader>g <cmd>Telescope live_grep<cr>
+" nnoremap <leader>h <cmd>Telescope help_tags<cr>
+
 
 " Better tabbing
 vnoremap < <gv

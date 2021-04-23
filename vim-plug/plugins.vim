@@ -14,6 +14,20 @@
 
 	  Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-	  Plug 'mhinz/vim-startify'
+	  " Plug 'mhinz/vim-startify'
+
+	  Plug 'preservim/nerdtree'
+
+      " telescope
+	 
+      Plug 'nvim-lua/popup.nvim'
+      Plug 'nvim-lua/plenary.nvim'
+      Plug 'nvim-telescope/telescope.nvim'
+
+      Plug 'morhetz/gruvbox'
+
+	  " Plug 'octol/vim-cpp-enhanced-highlight'
+
+	  Plug 'sheerun/vim-polyglot'
 
   call plug#end()
