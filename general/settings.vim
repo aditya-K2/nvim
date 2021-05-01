@@ -1,4 +1,3 @@
- let g:mapleader = "\<Space>"            " set leader key
  syntax enable                           " Enables syntax highlighing
  set hidden                              " Required to keep multiple buffers open multiple buffers
  set nowrap
@@ -20,7 +19,7 @@
  set shiftwidth=4
  set smartindent
 syntax on
-colorscheme gruvbox 
+colorscheme gruvbox
 hi Normal guibg=NONE ctermbg=NONE
 hi SignColumn guibg=NONE ctermbg=NONE
 let g:airline_theme = 'minimalist'
@@ -29,3 +28,11 @@ let g:user_emmet_mode="n"
 hi Pmenu ctermfg=gray ctermbg=236
 let g:color_coded_enabled = 1
 set nocompatible
+let g:floaterm_autoinsert=1
+let g:floaterm_width=0.8
+let g:floaterm_height=0.8
+let g:floaterm_wintitle=0
+let g:floaterm_autoclose=1
+function! CompileCPP()
+	FloatermNew nvim input.txt && g++ % && ./a.out && nvim output.txt && rm output.txt input.txt
+endfunction

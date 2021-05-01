@@ -6,17 +6,12 @@
       
 	  Plug 'vim-airline/vim-airline-themes'
       
-	  Plug 'justinmk/vim-sneak'   
-
 	  Plug 'tpope/vim-commentary'
 
 	  Plug 'mattn/emmet-vim'
 
 	  Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-	  " Plug 'mhinz/vim-startify'
-
-	  Plug 'preservim/nerdtree'
 
       " telescope
 	 
@@ -25,9 +20,8 @@
       Plug 'nvim-telescope/telescope.nvim'
 
       Plug 'morhetz/gruvbox'
-
-	  " Plug 'octol/vim-cpp-enhanced-highlight'
-
+	  Plug 'preservim/nerdtree'
 	  Plug 'sheerun/vim-polyglot'
+	  Plug 'voldikss/vim-floaterm'
 
   call plug#end()

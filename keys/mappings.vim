@@ -1,4 +1,4 @@
-" Use alt + hjkl to resize windows
+let g:mapleader = "\<Space>"            " set leader key
 nnoremap <M-j>    :resize -2<CR>
 nnoremap <M-k>    :resize +2<CR>
 nnoremap <M-h>    :vertical resize -2<CR>
@@ -9,24 +9,22 @@ nnoremap <TAB> :bnext<CR>
  " SHIFT-TAB will go back
 nnoremap <S-TAB> :bprevious<CR>
 
-" Alternate way to save
-"nnoremap <C-s> :w<CR>
-" Alternate way to quit
-" nnoremap <C-Q> :wq!<CR>
  nnoremap <C-\> :vsplit <CR>
  nnoremap <C-_> :split vertical <CR>
- nnoremap <C-n> :NERDTree <CR>
+ nnoremap <C-f> :NERDTree <CR>
  nnoremap <C-u> <cmd> lua require('telescope.builtin').find_files{cwd='/H/code',shorten_path = true, prompt='cpFiles'}<CR>
- nmap <S-n> <cmd> lua require('telescope.builtin').find_files{cwd='/home/aditya/.config/nvim', prompt='cpFiles'}<CR>
+ nmap <C-n> <cmd> lua require('telescope.builtin').find_files{cwd='/home/aditya/.config/nvim', prompt='cpFiles'}<CR>
 
-nmap <S-f> :Telescope find_files <CR>
-nmap fg :Telescope live_grep <CR>
-nmap fh :Telescope help_tags <CR>
-
-" nnoremap <leader>f <cmd>Telescope find_files<cr>
-" nnoremap <leader>g <cmd>Telescope live_grep<cr>
-" nnoremap <leader>h <cmd>Telescope help_tags<cr>
-
+nmap <leader>ff :Telescope find_files <CR>
+nmap <leader>fg :Telescope live_grep <CR>
+nmap <leader>fh :Telescope help_tags <CR>
+nmap <leader>fy :FloatermNew ncmpcpp  <CR>
+nmap <leader>fi :FloatermNew htop  <CR>
+nmap <leader>fo :FloatermNew ranger /H/code <CR>
+nmap <S-f> gg<CR>/ifndef ONLINE_JUDGE<CR>3dj 
+nmap <F5> :call CompileCPP()<CR>
+autocmd BufRead,BufNewFile *.txt nmap q :wq <CR>
+autocmd BufRead,BufNewFile *.txt nmap <CR> :wq <CR>
 
 " Better tabbing
 vnoremap < <gv
