@@ -24,4 +24,8 @@
 	  Plug 'sheerun/vim-polyglot'
 	  Plug 'voldikss/vim-floaterm'
 
+	  "Maximizer
+	  
+	  Plug 'szw/vim-maximizer'
+	  
   call plug#end()

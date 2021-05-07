@@ -9,11 +9,11 @@ nnoremap <TAB> :bnext<CR>
  " SHIFT-TAB will go back
 nnoremap <S-TAB> :bprevious<CR>
 
- nnoremap <C-\> :vsplit <CR>
- nnoremap <C-_> :split vertical <CR>
- nnoremap <C-f> :NERDTree <CR>
- nnoremap <C-u> <cmd> lua require('telescope.builtin').find_files{cwd='/H/code',shorten_path = true, prompt='cpFiles'}<CR>
- nmap <C-n> <cmd> lua require('telescope.builtin').find_files{cwd='/home/aditya/.config/nvim', prompt='cpFiles'}<CR>
+nnoremap <C-\> :vsplit <CR>
+nnoremap <C-_> :split vertical <CR>
+nnoremap <C-f> :NERDTree <CR>
+nnoremap <leader>fc <cmd> lua require('telescope.builtin').find_files{cwd='/H/code',shorten_path = true, prompt='cpFiles'}<CR>
+nmap <leader>fn <cmd> lua require('telescope.builtin').find_files{cwd='/home/aditya/.config/nvim', prompt='cpFiles'}<CR>
 
 nmap <leader>ff :Telescope find_files <CR>
 nmap <leader>fg :Telescope live_grep <CR>
@@ -21,10 +21,12 @@ nmap <leader>fh :Telescope help_tags <CR>
 nmap <leader>fy :FloatermNew ncmpcpp  <CR>
 nmap <leader>fi :FloatermNew htop  <CR>
 nmap <leader>fo :FloatermNew ranger /H/code <CR>
-nmap <S-f> gg<CR>/ifndef ONLINE_JUDGE<CR>3dj 
+nmap <leader>f<CR> :FloatermNew <CR>
+nmap <S-f> :MaximizerToggle <CR>
 nmap <F5> :call CompileCPP()<CR>
 autocmd BufRead,BufNewFile *.txt nmap q :wq <CR>
 autocmd BufRead,BufNewFile *.txt nmap <CR> :wq <CR>
+autocmd BufRead,BufNewFile *.cpp nmap <S-c> gg<CR>/ifndef ONLINE_JUDGE<CR>3dj <CR>
 
 " Better tabbing
 vnoremap < <gv
@@ -40,5 +42,3 @@ nnoremap <C-l> <C-w>l
 noremap! <C-BS> <C-w>
 noremap! <C-h> <C-w>
 
-" imap <C-D> X<Esc>lbce
-"imap <C-Del> X<Esc>ce

@@ -19,7 +19,7 @@
  set shiftwidth=4
  set smartindent
 syntax on
-colorscheme gruvbox
+colorscheme gruvbox 
 hi Normal guibg=NONE ctermbg=NONE
 hi SignColumn guibg=NONE ctermbg=NONE
 let g:airline_theme = 'minimalist'
