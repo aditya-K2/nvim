@@ -19,10 +19,12 @@
  set shiftwidth=4
  set smartindent
 syntax on
-colorscheme gruvbox 
+colorscheme OceanicNext 
 hi Normal guibg=NONE ctermbg=NONE
 hi SignColumn guibg=NONE ctermbg=NONE
-let g:airline_theme = 'minimalist'
+hi LineNr guibg=NONE ctermbg=NONE
+hi EndOfBuffer guibg=NONE ctermbg=NONE
+let g:airline_theme='onedark'
 let g:user_emmet_leader_key=","
 let g:user_emmet_mode="n"
 hi Pmenu ctermfg=gray ctermbg=236
@@ -33,6 +35,12 @@ let g:floaterm_width=0.8
 let g:floaterm_height=0.8
 let g:floaterm_wintitle=0
 let g:floaterm_autoclose=1
+function OpenSplit()
+	normal! G2k
+	vsplit input.txt
+	vertical resize -34
+	split output.txt
+endfunction
 function! CompileCPP()
-	FloatermNew nvim input.txt && g++ % && ./a.out && nvim output.txt && rm output.txt input.txt
+	FloatermNew nvim input.txt && g++ % && ./a.out <input.txt >output.txt && nvim output.txt && rm output.txt input.txt
 endfunction

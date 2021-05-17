@@ -1,8 +1,10 @@
 let g:mapleader = "\<Space>"            " set leader key
-nnoremap <M-j>    :resize -2<CR>
-nnoremap <M-k>    :resize +2<CR>
-nnoremap <M-h>    :vertical resize -2<CR>
-nnoremap <M-l>    :vertical resize +2<CR>
+nnoremap <M-k>    :resize -2<CR>
+nnoremap <M-j>    :resize +2<CR>
+nnoremap <M-l>    :vertical resize -2<CR>
+nnoremap <M-h>    :vertical resize +2<CR>
+nnoremap <M-CR>    :vsplit <CR>
+nnoremap <M-c>   <CR>:w<CR>:bdelete <CR>
 
 " TAB in general mode will move to text buffer
 nnoremap <TAB> :bnext<CR>
@@ -10,25 +12,26 @@ nnoremap <TAB> :bnext<CR>
 nnoremap <S-TAB> :bprevious<CR>
 
 nnoremap <C-\> :vsplit <CR>
-nnoremap <C-_> :split vertical <CR>
+nnoremap <leader><CR> :split<CR>
 nnoremap <C-f> :NERDTree <CR>
 nnoremap <leader>fc <cmd> lua require('telescope.builtin').find_files{cwd='/H/code',shorten_path = true, prompt='cpFiles'}<CR>
 nmap <leader>fn <cmd> lua require('telescope.builtin').find_files{cwd='/home/aditya/.config/nvim', prompt='cpFiles'}<CR>
 
+nmap <leader>mm :!pandoc % -t ms --pdf-engine-opt=-p  -o output.pdf && zathura output.pdf &<CR>
+nmap <leader>mc :!pandoc % -t ms --pdf-engine-opt=-p  -o output.pdf <CR>
 nmap <leader>ff :Telescope find_files <CR>
 nmap <leader>fg :Telescope live_grep <CR>
 nmap <leader>fh :Telescope help_tags <CR>
 nmap <leader>fy :FloatermNew ncmpcpp  <CR>
-nmap <leader>fi :FloatermNew htop  <CR>
+nmap <leader>fi gg<CR>/int main()<CR> :read! cat /home/aditya/suckless/scripts/ifdef<CR>:noh<CR>
 nmap <leader>fo :FloatermNew ranger /H/code <CR>
+nmap <leader>ss :source /home/aditya/.config/nvim/init.vim <CR>:echo "Sourced init.vim" <CR>
 nmap <leader>f<CR> :FloatermNew <CR>
-nmap <S-f> :MaximizerToggle <CR>
+nmap <M-m> :MaximizerToggle <CR>
 nmap <F5> :call CompileCPP()<CR>
-autocmd BufRead,BufNewFile *.txt nmap q :wq <CR>
 autocmd BufRead,BufNewFile *.txt nmap <CR> :wq <CR>
-autocmd BufRead,BufNewFile *.cpp nmap <S-c> gg<CR>/ifndef ONLINE_JUDGE<CR>3dj <CR>
 
-" Better tabbing
+"hello Better tabbing
 vnoremap < <gv
 vnoremap > >gv
 
@@ -37,6 +40,10 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+imap <C-h> <C-w>h
+imap <C-j> <C-w>j
+imap <C-k> <C-w>k
+imap <C-l> <C-w>l
 
 " Map Ctrl-Backspace to delete the previous word in insert mode.
 noremap! <C-BS> <C-w>
