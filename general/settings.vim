@@ -20,11 +20,12 @@
  set smartindent
 syntax on
 colorscheme OceanicNext 
-hi Normal guibg=NONE ctermbg=NONE
-hi SignColumn guibg=NONE ctermbg=NONE
-hi LineNr guibg=NONE ctermbg=NONE
+" colorscheme gruvbox 
+hi Normal guibg=#21222a ctermbg=NONE
+hi SignColumn guibg=#212021 ctermbg=NONE
+hi LineNr guibg=#212021 ctermbg=NONE
 hi EndOfBuffer guibg=NONE ctermbg=NONE
-let g:airline_theme='onedark'
+let g:airline_theme='minimalist'
 let g:user_emmet_leader_key=","
 let g:user_emmet_mode="n"
 hi Pmenu ctermfg=gray ctermbg=236
@@ -44,3 +45,7 @@ endfunction
 function! CompileCPP()
 	FloatermNew nvim input.txt && g++ % && ./a.out <input.txt >output.txt && nvim output.txt && rm output.txt input.txt
 endfunction
+set termguicolors
+set cursorline
+vmap <leader>a <Plug>(coc-codeaction-selected)
+nmap <leader>a <Plug>(coc-codeaction-selected)
