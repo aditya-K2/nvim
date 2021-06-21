@@ -20,15 +20,25 @@
  set smartindent
 syntax on
 colorscheme OceanicNext 
-" colorscheme gruvbox 
-hi Normal guibg=#21222a ctermbg=NONE
-hi SignColumn guibg=#212021 ctermbg=NONE
-hi LineNr guibg=#212021 ctermbg=NONE
+
+hi Cursor         guifg=#0b0c0d guibg=#f8f8f0 gui=NONE
+hi CursorLine     guifg=NONE guibg=#121415 gui=NONE
+hi CursorLineNr   guifg=#fbff00 guibg=#000000 gui=NONE
+hi CursorColumn   guifg=NONE guibg=#000000 gui=NONE
+hi ColorColumn    guifg=NONE guibg=#000000 gui=NONE
+hi LineNr         guifg=#222529 guibg=#000000 gui=NONE
+hi VertSplit      guifg=#222529 guibg=#222529 gui=NONE
+hi MatchParen     guifg=#6a9ec5 guibg=NONE gui=underline
+
+hi Normal guibg=#0b0c0d ctermbg=NONE
+hi SignColumn guibg=#0b0c0d ctermbg=NONE
+hi LineNr guibg=#0b0c0d guifg=#f6f7b9 ctermbg=NONE
 hi EndOfBuffer guibg=NONE ctermbg=NONE
-let g:airline_theme='minimalist'
+
+let g:airline_theme='badwolf'
 let g:user_emmet_leader_key=","
 let g:user_emmet_mode="n"
-hi Pmenu ctermfg=gray ctermbg=236
+hi Pmenu ctermfg=gray guibg=#262525
 let g:color_coded_enabled = 1
 set nocompatible
 let g:floaterm_autoinsert=1
@@ -47,5 +57,14 @@ function! CompileCPP()
 endfunction
 set termguicolors
 set cursorline
-vmap <leader>a <Plug>(coc-codeaction-selected)
-nmap <leader>a <Plug>(coc-codeaction-selected)
+let g:airline#extensions#coc#enabled = 0
+let g:airline#extensions#whitespace#enabled = 0
+let g:jellybeans_use_gui_italics = 1
+let g:jellybeans_use_term_italics = 1
+hi CocErrorFloat guibg=#222529 guifg=#ff570f
+
+let g:airline#extensions#tabline#enabled = 1
+
+set showtabline=2
+
+set noshowmode

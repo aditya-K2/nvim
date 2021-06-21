@@ -28,4 +28,11 @@
 		"Maximizer
 		Plug 'szw/vim-maximizer'
 		Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
+
+		" Plug 'junegunn/rainbow_parentheses.vim'
+		" Plug 'chriskempson/base16-vim'
+		" Plug 'jacoborus/tender.vim'
+		" Plug 'nanotech/jellybeans.vim'
+
+		Plug 'cdelledonne/vim-cmake'
   call plug#end()

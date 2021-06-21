@@ -3,8 +3,7 @@ nnoremap <M-k>    :resize -2<CR>
 nnoremap <M-j>    :resize +2<CR>
 nnoremap <M-l>    :vertical resize -2<CR>
 nnoremap <M-h>    :vertical resize +2<CR>
-nnoremap <M-CR>    :vsplit <CR>
-nnoremap <S-c>    <CR>:bdelete <CR>
+nnoremap <M-c>    <CR>:bdelete <CR>
 
 " TAB in general mode will move to text buffer
 nnoremap <TAB> :bnext<CR>
@@ -13,13 +12,15 @@ nnoremap <S-TAB> :bprevious<CR>
 
 nnoremap <C-\> :vsplit <CR>
 nnoremap <leader><CR> :split<CR>
-nnoremap <C-f> :NERDTree <CR>
+nnoremap <C-f> :NERDTreeToggle <CR>
 nnoremap <leader>fc <cmd> lua require('telescope.builtin').find_files{cwd='/H/code',shorten_path = true, prompt='cpFiles'}<CR>
 nnoremap <leader>fs <cmd> lua require('telescope.builtin').find_files{cwd='/home/aditya/suckless/scripts',shorten_path = true, prompt='cpFiles'}<CR>
 nmap <leader>fn <cmd> lua require('telescope.builtin').find_files{cwd='/home/aditya/.config/nvim', prompt='cpFiles'}<CR>
 
 nmap <leader>mm :!pandoc % -o output.pdf --highlight-style breezedark && zathura output.pdf &<CR>
 nmap <leader>mc :!pandoc % -o output.pdf --highlight-style breezedark &<CR>
+nmap <leader>mp :!pandoc % -o output.pdf -t beamer --highlight-style breezedark && zathura output.pdf &<CR>
+nmap <leader>mn :!pandoc % -o output.pdf -t beamer --highlight-style breezedark &<CR>
 nmap <leader>ff :Telescope find_files <CR>
 nmap <leader>fg :Telescope live_grep <CR>
 nmap <leader>fh :Telescope help_tags <CR>
@@ -28,14 +29,19 @@ nmap <leader>fi gg<CR>/int main()<CR> :read! cat /home/aditya/suckless/scripts/i
 nmap <leader>fo :FloatermNew ranger /H/code <CR>
 nmap <leader>ss :source /home/aditya/.config/nvim/init.vim <CR>:echo "Sourced init.vim" <CR>
 nmap <leader>f<CR> :FloatermNew <CR>
-nmap <S-f> :MaximizerToggle <CR>
+nmap <leader><leader> :MaximizerToggle<CR>
 nmap <F5> :call CompileCPP()<CR>
 autocmd BufRead,BufNewFile *.txt nmap <CR> :wq <CR>
+
+vmap <C-o> <Plug>(coc-codeaction-selected)
+nmap <C-o> <Plug>(coc-codeaction-selected)
 
 "hello Better tabbing
 vnoremap < <gv
 vnoremap > >gv
 
+nnoremap <S-j> <C-d> <CR>
+nnoremap <S-k> <C-u> <CR>
 "Better Window Navigation
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
